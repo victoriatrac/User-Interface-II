@@ -1,1 +1,180 @@
-/* Add CSS styling here */
+/* CSS reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Main  */
+
+* {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+button {
+    background-color: white;
+    color: black;
+    padding: .5rem;
+    border: 1px solid black;
+    font-size: 1rem;
+}
+
+button:active {
+    background-color: black;
+    color: white;
+}
+
+/* Header/Footer/Navigation */
+
+#header-txt {
+    font-weight: 700;
+    font-size: 3rem;
+    padding: 20px 50px 20px 20px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #666666;
+}
+
+#nav-top {
+    width: 25%;
+    height: 2rem;
+    display: inline-flex;
+    justify-content: space-evenly;
+    font-size: 1rem;
+}
+
+#nav-top a {
+    border: 1px solid black;
+    padding: .5rem;
+    margin-left: 1rem;
+    background-color: white;
+    color: red;
+    text-decoration: none;
+}
+
+#nav-top li {
+    display: inline;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #666666;
+    padding: 50px;
+    margin-top: 20px;
+}
+
+footer button {
+    margin: 2rem;
+}
+
+#links {
+    line-height: 2rem;
+}
+
+/* Content  */
+
+#about {
+    width: 60%;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about-img {
+    flex: 40%;
+    margin: auto;
+}
+
+#about-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+#about-txt {
+    flex: 60%;
+    margin: auto;
+    font-size: 1.25rem;
+}
+
+#about button {
+    margin: 2.5rem;
+}
+
+#gallery {
+    width: 85%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.gallery-img {
+    margin: .5rem;
+    margin-top: 2rem;
+    max-width: 400px;
+    height: auto;
+}
