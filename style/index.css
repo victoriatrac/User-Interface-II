@@ -156,10 +156,12 @@ footer button {
 
 footer a {
     color: white;
+    padding: 0px .2rem;
 }
 
 footer a:hover {
     color: black;
+    background-color: white;
 }
 
 #links {
