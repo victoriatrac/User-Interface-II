@@ -68,6 +68,11 @@ body {
     background-position: bottom center;
 }
 
+#container {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
 h1 {
     font-family: 'Courier Prime', monospace;
     font-weight: 700;
@@ -101,20 +106,20 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    background-color: #black;
+    padding: 20px 0px;
+    background-color: black;
 }
 
 #header-txt {
-    padding: 20px 50px 20px 20px;
+    padding: 20px 0px 20px 20px;
 }
 
 #nav-top {
-    width: 45%;
-    height: 2rem;
+    width: 40%;
+    height: 1rem;
     font-size: 1rem;
     text-align: right;
-    margin: 3rem;
+    margin: 0 3rem 0 0rem;
 }
 
 #nav-top a {
@@ -142,6 +147,7 @@ footer {
     padding-bottom: 50px;
     margin-top: 3rem;
     margin-right: 0px;
+    overflow: hidden;
 }
 
 footer button {
@@ -150,10 +156,12 @@ footer button {
 
 footer a {
     color: white;
+    padding: 0px .2rem;
 }
 
 footer a:hover {
     color: black;
+    background-color: white;
 }
 
 #links {
@@ -164,29 +172,32 @@ footer a:hover {
 
 #about {
     width: 60%;
-    margin: 60px auto;
+    margin: 2rem auto 2rem auto;
     display: flex;
     flex-wrap: wrap;
     background: rgba(0, 0, 0, 0.6);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 50px;
 }
 
 #about-img {
     flex: 40%;
     margin: auto;
+    padding-right: 1rem;
 }
 
 #about-img img {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
+    border: 2px solid white;
 }
 
 #about-txt {
     flex: 50%;
     margin: auto;
     font-size: 1.25rem;
+    padding-left: 1rem;
 }
 
 #about-txt p {
@@ -194,11 +205,11 @@ footer a:hover {
 }
 
 #about button {
-    margin: 2.5rem;
+    margin: 2.5rem 0 2.5rem 0;
 }
 
 #gallery {
-    width: 85%;
+    width: 95%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -206,58 +217,166 @@ footer a:hover {
 }
 
 .gallery-img {
-    margin: .5rem;
-    margin-top: 2rem;
-    max-width: 400px;
-    height: auto;
-    border: solid .25rem black;
+    width: 30%;
+    max-width: 450px;
+    min-width: 350px;
+    padding: .5rem;
+    text-align: center;
 }
 
-.gallery-img:hover {
+.gallery-img img {
+    width: 98%;
+    height: auto;
+    border: solid .25rem black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-img img:hover {
     border: solid .25rem white;
+}
+
+.gallery-txt {
+    background-color: black;
+    width: 98%;
+    padding: .75rem 0;
+    font-size: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-txt a {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.gallery-txt a:hover {
+    text-decoration: none;
 }
 
 /* TABLET SIZE */
 
-@media screen and (max-width: 1000px) {
-    header {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-        background-color: transparent;
+/* change l/r margins of bio, img size */
+
+@media screen and (max-width: 800px) {
+    #container {
+        max-width: 750px;
     }
+
+    header {
+        background-color: transparent;
+        padding: 2rem 0rem;
+    }
+    
     #header-txt {
         padding: 0px;
         text-align: center;
-        width: 100%;
-        margin: 2rem auto 1rem auto;
-    }
-
-    #about-txt {
-        margin-top: 1.5rem;
+        width: 50%;
+        margin: 1rem auto;
     }
     
     #nav-top {
         width: 100%;
         height: 2rem;
-        display: block;
-        font-size: 1rem;
-        margin-bottom: 150px;
-        padding: 0px;
-        padding-bottom: 1.5rem;;
+        margin: 0 auto 2rem auto;
+        padding-bottom: 1rem;
+        text-align: center;
     }
 
     #nav-top a {
-        border: 1px solid black;
-        padding: .5rem;
-        margin-top: 1rem;
         margin-left: auto;
         margin-right: auto;
-        text-align: center;
         display: block;
-        width: 35%;
+        width: 50%;
+    }
+
+    #about {
+        width: 80%;
+    }
+
+    #about-img {
+        padding-right: .5rem;
+    }
+
+    #about-txt {
+        margin-top: 1.5rem;
+        padding-left: .5rem;
+    }
+
+    #about-txt p {
+        line-height: 1.5rem;
+    }
+
+    #about button {
+        margin: 1rem 0 1rem 0;
+    }
+
+    .gallery-img {
+        width: 45%;
+        padding: .25rem;
+    }
+}
+
+/* CELL SIZE */
+
+/* change t/b margins, img size, width of content */
+
+@media screen and (max-width: 500px) {
+
+    #container {
+        max-width: 500px;
+    }
+
+    h1 {
+        font-family: 'Courier Prime', monospace;
+        font-weight: 700;
+        font-size: 3rem;
+    }
+
+    #header-txt {
+        padding: 20px 0px 20px 0px;
+        margin: auto;
+        width: 90%;
+    }
+    
+    #nav-top {
+        margin: 0 auto 3rem auto;
+    }
+    
+    #nav-top a {
+        width: 75%;
+        margin: auto;
+    }
+
+    #about {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    #about-img {
+        flex: 100%;
+        margin: auto;
+        padding-top: 1rem;
+        padding-right: 0;
+    }
+    
+    #about-img img {
+        width: 40%;
+        height: 40%;
+        border-radius: 50%;
+        border: 2px solid white;
+    }
+    
+    #about-txt {
+        flex: 100%;
+        margin: 1rem auto;
+        font-size: 1.25rem;
+        padding-left: 0rem;
+    }
+
+    .gallery-img {
+        width: 100%;
+        padding: .5rem .25rem;
+        max-width: 350px;
     }
 }
